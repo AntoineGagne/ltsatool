@@ -1,7 +1,7 @@
 pkgbase=ltsatool
 pkgname=ltsatool
 pkgver=3.0.0
-pkgrel=1
+pkgrel=2
 url='http://www.doc.ic.ac.uk/~jnm/book/'
 arch=('any')
 pkgdesc='Tools used to formally specify and verify softwares.'
@@ -23,11 +23,11 @@ package() {
     cd "$srcdir"
 
     install -d "${pkgdir}"/{opt/${pkgname}/,usr/bin}
-    install -d "${pkgdir}"/opt/${pkgname}/{bin,examples,assets,docs}
+    install -d "${pkgdir}"/opt/${pkgname}/{bin,lib,examples,assets,docs}
 
-    mv "${pkgname}/ltsa.jar" "${pkgdir}/opt/${pkgbase}/bin"
-    mv animation/*.jar "${pkgdir}/opt/${pkgbase}/bin"
-    mv "${pkgname}/ltl2buchi.jar" "${pkgdir}/opt/${pkgbase}/bin"
+    mv "${pkgname}/ltsa.jar" "${pkgdir}/opt/${pkgbase}/lib"
+    mv animation/*.jar "${pkgdir}/opt/${pkgbase}/lib"
+    mv "${pkgname}/ltl2buchi.jar" "${pkgdir}/opt/${pkgbase}/lib"
 
     mv animation/SceneAnimations "${pkgdir}/opt/${pkgbase}/examples/animations"
     mv "${pkgname}/Chapter_examples"/* "${pkgdir}/opt/${pkgbase}/examples/"
