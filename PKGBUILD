@@ -1,7 +1,7 @@
 pkgbase=ltsatool
 pkgname=ltsatool
 pkgver=3.0.0
-pkgrel=2
+pkgrel=3
 url='http://www.doc.ic.ac.uk/~jnm/book/'
 arch=('any')
 pkgdesc='Tools used to formally specify and verify softwares.'
