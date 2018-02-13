@@ -1,3 +1,4 @@
 #! /usr/bin/env bash
 
-java -jar /opt/ltsatool/bin/ltsa.jar
+java -splash:/opt/ltsatool/assets/splash.png \
+     -jar /opt/ltsatool/bin/ltsa.jar
