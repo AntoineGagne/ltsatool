@@ -1,7 +1,7 @@
 pkgbase=ltsatool
 pkgname=ltsatool
 pkgver=3.0.0
-pkgrel=3
+pkgrel=4
 url='http://www.doc.ic.ac.uk/~jnm/book/'
 arch=('any')
 pkgdesc='Tools used to formally specify and verify softwares.'
@@ -17,13 +17,15 @@ prepare() {
     mkdir -p "${srcdir}/assets"
     cp ../bin/* "${srcdir}/bin"
     cp ../assets/* "${srcdir}/assets"
+    cp ../misc/ltsa.desktop "${srcdir}"
 }
 
 package() {
     cd "$srcdir"
 
-    install -d "${pkgdir}"/{opt/${pkgname}/,usr/bin}
+    install -d "${pkgdir}"/{opt/${pkgname}/,usr}
     install -d "${pkgdir}"/opt/${pkgname}/{bin,lib,examples,assets,docs}
+    install -d "${pkgdir}"/usr/{bin,share/applications}
 
     mv "${pkgname}/ltsa.jar" "${pkgdir}/opt/${pkgbase}/lib"
     mv animation/*.jar "${pkgdir}/opt/${pkgbase}/lib"
@@ -37,5 +39,6 @@ package() {
     mv bin/* "${pkgdir}/opt/${pkgbase}/bin"
     mv assets/* "${pkgdir}/opt/${pkgbase}/assets"
 
+    mv "ltsa.desktop" "${pkgdir}/usr/share/applications"
     ln -s "/opt/${pkgname}/bin/ltsa.sh" "${pkgdir}/usr/bin/ltsa"
 }

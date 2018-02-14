@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=Application
+Version=1.1
+Name=ltsa
+Comment=Tools used to formally specify and verify softwares.
+
+Exec=/usr/bin/ltsa
+Icon=/opt/ltsatool/assets/ltsa.png
+Terminal=false
+
+Categories=Education
+Keywords=Education;Java;LTSA;Formal Specification;
