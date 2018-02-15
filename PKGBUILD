@@ -1,12 +1,12 @@
 pkgbase=ltsatool
 pkgname=ltsatool
-pkgver=3.0.0
-pkgrel=4
+pkgver=3.0
+pkgrel=5
 url='http://www.doc.ic.ac.uk/~jnm/book/'
 arch=('any')
 pkgdesc='Tools used to formally specify and verify softwares.'
-license=('custom')
-depends=('java-environment')
+license=('unknown')
+depends=('java-runtime')
 source=("http://www.doc.ic.ac.uk/~jnm/book/ltsa/$pkgname.zip" \
         "https://www.doc.ic.ac.uk/~jnm/book/ltsa/animation.zip")
 sha256sums=('9ed894c4f2ae22e119a4f48e6e3f36b38b08f8fe85a6ac85564f4c5045fe9046' \
