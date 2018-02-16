@@ -10,7 +10,6 @@ main() {
     mkdir -p "${LOG_DIRECTORY}"
 
     java -splash:/opt/ltsatool/assets/splash.png \
-         -Xmx512m \
          -XX:+UnlockDiagnosticVMOptions \
          -XX:ErrorFile="${ERRORS_LOG_FILE}" \
          -XX:LogFile="${LOG_FILE}" \
