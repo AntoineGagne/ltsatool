@@ -23,4 +23,4 @@ You can install this ``PKGBUILD`` by doing the following command:
 
     makepkg -si
 
-This will install two program: ``ltl2buchi`` and ``ltsa``.
+This will install the program ``ltsa``.
